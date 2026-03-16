@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Final</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #2a5298, #1e3c72, #2a5298);
+      background-size: 600% 600%;
+      animation: gradientMove 20s ease infinite;
+      color: #fff;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position:0% 50%}
+      50% {background-position:100% 50%}
+      100% {background-position:0% 50%}
+    }
+
+    .texto {
+      font-size: 1.3em;
+      max-width: 90%;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 4s forwards;
+      white-space: pre-line; /* mantém quebras de linha */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .playlist {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .playlist a {
+      background: #1DB954; /* verde Spotify */
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    .playlist a:hover {
+      background: #1ed760;
+      box-shadow: 0 0 15px #1ed760;
+    }
+
+    .playlist img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0px #1DB954; }
+      50% { transform: scale(1.05); box-shadow: 0 0 15px #1DB954; }
+      100% { transform: scale(1); box-shadow: 0 0 0px #1DB954; }
+    }
+  </style>
+</head>
+<body>
+  <div class="texto">
+Meu Amor, nesses dois meses eu finalmente consegui enxergar o quão bom é viver.  
+Pascal lembrava que "o coração tem razões que a própria razão desconhece", e é nessas razões invisíveis que eu me entrego a ti, é nessas razões que eu vejo o quanto vale esperar só pra poder te abraçar um dia.  
+E é nesse abraço imaginado que descubro o quanto o tempo se torna pequeno diante da imensidão do que sinto.  
+
+Como disse Tagore, "o amor é a única realidade, não é um mero sentimento. É a verdade última que está no coração da criação".  
+E é nessa verdade que eu encontro paz, porque contigo até o silêncio se torna música e até a espera se torna esperança.  
+
+A distância pode ser dura, mas ela nunca foi capaz de diminuir o que sinto. Pelo contrário, cada quilômetro entre nós só reforça o quanto vale a pena esperar, o quanto vale a pena sonhar com o momento em que estaremos lado a lado.  
+É como se o espaço fosse apenas um lembrete de que o amor verdadeiro atravessa fronteiras e se fortalece na saudade.  
+
+Dois meses podem parecer só o começo, mas pra mim já são eternidade em forma de promessa.  
+Cada riso teu é um capítulo, cada palavra tua é um verso, e cada instante contigo é uma história que não se encerra.  
+
+Eu te amo com toda minha alma, princesa. Você é tudo que eu mais pedi a Deus. Mesmo antes de te conhecer, você já estava em cada palavra das minhas orações, em cada verso das minhas músicas preferidas, em cada sonho que eu guardava em silêncio.  
+Hoje eu sei… não era só desejo, não era só esperança. Era destino. E o meu destino é amar você, todos os dias da minha vida.
+  </div>
+
+  <div class="playlist">
+    <a href="https://open.spotify.com/playlist/6kSL9qrHl5lnDu1sDYbiKr?si=Dxw6P9m6Sf2xU5imt4wawA" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify">
+      Ouvir nossa playlist
+    </a>
+  </div>
+</body>
+</html>

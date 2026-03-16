@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-cabeça do coração</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298); /* azul */
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    .puzzle {
+      display: flex;
+      flex-wrap: wrap;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    .piece {
+      width: 100px;
+      height: 100px;
+      background-color: #0d6efd;
+      margin: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    .piece.active {
+      opacity: 1;
+      background-color: #ff4d6d; /* cor de coração */
+    }
+    .key-button {
+      display: none;
+      margin-top: 20px;
+      background: #ffc107;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50%;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .frase {
+      margin-top: 15px;
+      font-size: 1.2em;
+      color: #fff;
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h2>Monte o coração 💙</h2>
+  <div class="puzzle">
+    <div class="piece" onclick="ativar(this)">❤</div>
+    <div class="piece" onclick="ativar(this)">❤</div>
+    <div class="piece" onclick="ativar(this)">❤</div>
+    <div class="piece" onclick="ativar(this)">❤</div>
+  </div>
+  
+  <button class="key-button" id="keyBtn" onclick="irParaPagina3()">🔑</button>
+  <div class="frase" id="frase">O que te pertence... a chave do meu coração.</div>
+  
+  <script>
+    let ativadas = 0;
+    function ativar(el) {
+      if (!el.classList.contains("active")) {
+        el.classList.add("active");
+        ativadas++;
+      }
+      if (ativadas === 4) {
+        document.getElementById("keyBtn").style.display = "inline-block";
+        document.getElementById("frase").style.display = "block";
+      }
+    }
+    function irParaPagina3() {
+      window.location.href = "pagina3.html";
+    }
+  </script>
+</body>
+</html>
