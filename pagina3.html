@@ -3,73 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pré-declaração</title>
+  <title>Carta</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to bottom, #1e3c72, #2a5298); /* tons de azul */
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
       color: #fff;
       font-family: 'Georgia', serif;
       text-align: center;
       padding: 20px;
     }
+    .carta {
+      position: relative;
+      width: 300px;
+      height: 270px;
+      background: #ff4d6d;
+      transform: rotate(-45deg);
+      margin: 20px;
+    }
+    .carta::before,
+    .carta::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #ff4d6d;
+    }
+    .carta::before {
+      top: -150px;
+      left: 0;
+    }
+    .carta::after {
+      left: 150px;
+      top: 0;
+    }
     .texto {
-      font-size: 1.4em;
-      max-width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: rotate(45deg) translate(-50%, -50%);
+      width: 80%;
+      font-size: 0.9em;
       line-height: 1.6;
+      color: #fff;
       opacity: 0;
-      animation: fadeIn 3s forwards;
+      animation: fadeIn 4s forwards;
+      white-space: pre-line;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    .carta {
-      margin-top: 40px;
-      width: 120px;
-      height: 80px;
-      background: #0d6efd;
-      border-radius: 8px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .selo {
-      position: absolute;
-      bottom: -20px;
+    .botao {
+      margin-top: 30px;
       background: #ffc107;
       color: #000;
       border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 1.2em;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 1.1em;
       cursor: pointer;
+      transition: 0.3s;
     }
-    .selo:hover {
-      background: #ffcd39;
+    .botao:hover {
+      background: #ffda44;
+      box-shadow: 0 0 15px #ffc107;
     }
   </style>
 </head>
 <body>
-  <div class="texto">
-    “Eu não apenas me apaixonei por ti, eu passei a enxergar você em cada detalhe daquilo que me faz viver.  
-    Você se tornou presença nas minhas paixões, inspiração nos meus sonhos e razão nos meus sorrisos.”
-  </div>
-
   <div class="carta">
-    <button class="selo" onclick="irParaPagina4()">📜</button>
+    <div class="texto">
+Meu Amor,  
+
+Nestes dois meses percebi que o tempo não é feito de dias ou horas, mas de instantes eternos quando penso em você.  
+Cada palavra tua é poesia, cada silêncio teu é música, e cada lembrança tua é refúgio.  
+
+Pascal dizia que "o coração tem razões que a própria razão desconhece".  
+E é nessas razões invisíveis que eu me entrego, porque amar você é a mais bela certeza que já tive.  
+
+Tagore lembrava que "o amor é a única realidade".  
+E eu entendo isso agora: contigo, até a distância se torna promessa, e até a saudade se transforma em esperança.  
+
+Eu te amo com toda minha alma, princesa. Você é tudo que eu mais pedi a Deus.  
+Hoje sei que não era apenas desejo ou esperança. Era destino.  
+E o meu destino é amar você, todos os dias da minha vida.
+    </div>
   </div>
 
-  <script>
-    function irParaPagina4() {
-      window.location.href = "pagina4.html";
-    }
-  </script>
+  <button class="botao" onclick="window.location.href='pag4.html'">Seguir para a última página</button>
 </body>
 </html>
